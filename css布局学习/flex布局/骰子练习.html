@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* .contain{
+        width: 800px;
+        height: 800px;    
+        float: left;
+    } */
+    
+    ul{
+        list-style: none;
+        width: 180px;
+        height: 180px;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        border-radius: 20px;
+        background-color: #cccccc;
+        float: left;
+        margin: 5px;
+    }
+    div{
+        width: 100%;
+        height: 60px;
+        display: flex;
+    }
+    .u1{
+      
+
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: row wrap;
+        /* align-content: flex-end; */
+
+
+      
+    }
+    .u2{
+       
+    
+        justify-content: center;
+      
+    }
+    .u3{
+   
+        justify-content: flex-end;
+      
+    }
+    .u4{
+   
+        justify-content: space-between;
+    }
+    .u5{
+   
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .u6{
+       
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    /* .u7{
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+    } */
+    .u6>li:nth-of-type(1){
+        align-self: flex-start;
+    }
+    .u6>li:nth-of-type(2){
+        align-self: center;
+    }
+    .u6>li:nth-of-type(3){
+        align-self: flex-end;
+    }
+    .u7{
+        justify-content: space-between;
+    
+        flex-flow: row wrap;
+    }
+    .u7>div:nth-of-type(1){
+        justify-content: space-between;
+    }
+    .u7>div:nth-of-type(2){
+        justify-content: center;
+    }
+    .u7>div:nth-of-type(3){
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .u8{
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .u9{
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .u10{
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .u11{
+        flex-flow: column nowrap ;
+        justify-content: space-between;
+    }
+    .u12{
+        justify-content: space-between;
+       align-items: flex-end;
+    }
+    .u13{
+        /* align-items: baseline; */
+    flex-flow: row wrap;
+    /* align-items: center; */
+    align-content: space-between;
+
+    }
+    .u13>div:nth-of-type(1){
+  
+     
+        justify-content: space-between;
+        /* background-color: brown; */
+      
+
+    }
+    .u13>div:nth-of-type(2){
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .u14{
+        flex-flow: column wrap;
+        align-content: space-between;
+        justify-content: space-between;
+    }
+   .u15{
+       justify-content: flex-start;
+       align-items: flex-end;
+   }
+   .u16{
+    justify-content: center;
+       align-items: flex-end;
+   }
+   .u17{
+    justify-content: flex-end;
+       align-items: flex-end;
+   }
+   .u18{
+       flex-flow: column wrap;
+   }
+   .u18>li:nth-of-type(2){
+       align-self: center;
+   }
+   .u19{
+       flex-flow: column wrap;
+   }
+   .u19>li:nth-of-type(2){
+       align-self: flex-end;
+   }
+   .u20{
+       flex-flow: column wrap;
+      justify-content: space-between;
+   }
+
+    li{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: black;
+    }
+    .u20>li:nth-of-type(2){
+        align-self: flex-end;
+    }
+
+    .u21{
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .u21>div:nth-of-type(1){
+        justify-content: space-between;
+    }
+    .u21>div:nth-of-type(2){
+        justify-content: center;
+    }
+    .u21>div:nth-of-type(3  ){
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    /* .u2>li{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: black;
+    } */
+</style>
+<body>
+    
+<ul class="u1">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<ul class="u2">
+    <li></li>
+    <!-- <li></li> -->
+</ul>
+<ul class="u3">
+    <li></li>
+</ul>
+<ul class="u4">
+    <li></li>
+    <li></li>
+</ul>
+<ul class="u5">
+    <li></li>
+    <li></li>
+</ul>
+<ul class="u6">
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<ul class="u7">
+    <div >
+        <li></li>
+        <li></li>
+    </div>
+    <div >
+        <li></li>
+    </div>
+    <div >
+        <li></li>
+        <li></li>
+    </div>
+   
+</ul>
+<ul class="u8">
+    <li></li>
+</ul>
+<ul class="u9">
+    <li></li>
+</ul>
+<ul class="u10">
+    <li></li>
+</ul>
+<ul class="u11">
+    <li></li>
+    <li></li>
+</ul>
+<ul class="u12">
+    <li></li>
+    <li></li>
+</ul>
+<ul class="u13">
+    <div>
+        <li></li>
+        <li></li>
+    </div>
+    <div>
+        <li></li>
+        <li></li>
+    </div>
+  
+   
+</ul>
+<ul class="u14">
+   
+        <li></li>
+        <li></li>
+        <li></li>
+
+   
+        <li></li>
+        <li></li>
+        <li></li>
+  
+</ul>
+<ul class="u15">
+    <li></li>
+</ul>
+<ul class="u16">
+    <li></li>
+</ul>
+<ul class="u17">
+    <li></li>
+</ul>
+<ul class="u18">
+    <li></li>
+    <li></li>
+</ul>
+<ul class="u19">
+    <li></li>
+    <li></li>
+</ul>
+<ul class="u20">
+    <li></li>
+    <li></li>
+</ul>
+<ul class="u21">
+    <div>
+        <li></li>
+        <li></li>
+    </div>
+    <div>
+        <li></li>
+       
+    </div>
+    <div>
+        <li></li>
+        <li></li>
+        <li></li>
+    </div>
+</ul>
+
+
+
+
+
+<!--  -->
+</body>
+</html>

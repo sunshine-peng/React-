@@ -1,0 +1,68 @@
+1、解释型语言的特性
+计算机不能直接理解高级语言，必须把高级语言翻译成机器语言才能执行高级语言编写的程序。
+翻译的方式有两种：编译，解释  (两者只是翻译的时间不同)
+解释型语言：不需要编译，程序在运行的时候才翻译成机器语言，执行一次翻译一次。
+特点：
+一. 效率低
+每执行一次都要进行翻译。
+二. 非独立性（依赖解释器）
+三. 跨平台性好
+编译型语言进行移植后要重新编译，相对而言解释型语言跨平台较容易。
+同等条件下，编译型语言对系统的条件要求比较低，像开发操作系统，
+大型应用程序，数据库系统，则用编译型语言。
+对不同平台兼容性有一定要求的程序通常使用解释型语言。
+
+2、行内javasvript
+1、行内js：js不单独写出；
+<input type="button" value="点击有惊喜" οnclick="javascript:alert('哈哈哈哈')">
+
+3、改变作用域链的方式
+(1)eval()函数(全局函数)
+eval() 函数可计算某个字符串，并执行其中的的 JavaScript 代码。
+该方法只接受原始字符串作为参数
+(2)with
+with 语句用于设置代码在特定对象中的作用域。将会指定的对象添加到作用域链中
+var sMessage = "hello";
+with(sMessage) {
+  alert(toUpperCase());	//输出 "HELLO"
+}
+(3)try-catch  
+ry catch中的catch块，会创建一个新的变量对象，其中包含的是被抛出的错误对象的声明。   
+
+4、offsetWidth,offsetHeight,offsetTop,offsetLeft的理解
+①offsetWidth:等于盒子实际占的宽度（padding+border+width）
+②offsetHeight：等于盒子实际占的高度（padding+border+height）
+③offsetTop:其值为盒子border外距离最近一个具有定位的祖宗元素(relative,absolute,fixed)到border内的值
+④offsetLeft:其值为盒子border外距离最近一个具有定位的祖宗元素(relative,absolute,fixed)到border内的值
+
+5clientWidth,clientHeight,clientTop,clientLeft的理解
+①clientWidth:等于盒子的实际长度刨除边框的宽度(padding+width),如果有滚动条，还应该减去纵向滚动条的宽度
+②clientHeight：等于盒子的实际高度刨除边框的高度(padding+height),如果有滚动条，还应该减去滚动条的高度
+③clientTop：等于盒子上边框的宽度
+④clientLeft：等于盒子左边框的宽度
+
+6、scrollWidth,scrollHeight,scrollTop,scrollLeft
+①scrollWidth：返回元素内容的整体宽度，包括由于溢出而无法展示在网页的不可见部分。
+②scrollHeight：返回元素内容的整体高度，包括由于溢出而无法展示在网页的不可见部分。
+③scrollTop:元素向上卷曲出去的长度
+④scrollLeft：元素向左卷曲出去的距离
+
+7、clientX,clientY
+①clientX：鼠标相对于浏览器有效区域的x坐标
+②clientY：鼠标相对于浏览器有效区域的y坐标
+
+8、screenX,screenY
+①screenX:鼠标相对于浏览器屏幕的x坐标
+②screenY:鼠标相对于浏览器屏幕的y坐标
+
+9、offsetX,offsetY
+①offsetX：鼠标相对于事件源的内容的x做标(padding+width)，边框部分为负的x坐标
+②offsetY：鼠标相对于事件源的内容的y做标(padding+height)，边框部分为负的y坐标
+
+10、pageX,pageY
+①pageX:火狐和谷歌支持，鼠标x坐标等于clientX+scrollLeft的值
+②pageY:火狐和谷歌支持，鼠标y坐标等于clienty+scrollTop的值
+
+11、pageXOffset，pageYOffset
+①pageXOffset：其值为滚动条在横轴滚动的距离，IE不支持
+②pageYOffset：其值为滚动条在纵轴滚动的距离 IE不支持

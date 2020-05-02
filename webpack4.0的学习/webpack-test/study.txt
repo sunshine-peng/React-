@@ -1,0 +1,2 @@
+webpack4之后 命令行启动的部分的脚本都放在了webpack-cli上,
+如果你只装了webpack，就只能作为一个node.js的包使用，而不能在命令行上使用,

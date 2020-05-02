@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<!-- <p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p>
+<p>防抖演示</p> -->
+<script>
+    var body=document.body
+    var str=''
+    for(var i=0;i<40;i++){
+        str+='<p>防抖演示</p>'
+    }
+    body.innerHTML=str
+//     function debounce(fn, wait) {
+//     var timeout = null;      //定义一个定时器
+//     return function() {
+//         if(timeout !== null) {
+//                 clearTimeout(timeout); 
+//                 console.log('5')
+//           }  //清除这个定时器
+//         timeout = setTimeout(fn, wait); 
+      
+//     }
+// }
+// // 处理函数
+// function handle() {
+//     console.log(Math.random()); 
+// }
+// // 滚动事件
+// window.addEventListener('scroll', debounce(handle, 1000));
+
+/*节流 
+  方式一：使用定时器节流
+
+*/
+// var throttle = function(func, delay) {
+//     var timer = null;
+//     // console.log('666')
+//     console.log(arguments)
+//     return function() {
+//         var context = this;
+//         // console.log('dd',context)
+//         var args = arguments;
+//         console.log('66',args)
+//         if (!timer) {
+//             timer = setTimeout(function() {
+//                 func.apply(context, args);
+//                 timer = null;
+//             }, delay);
+//             // console.log('5')
+//         }
+//     }
+// }
+// function handle() {
+//     console.log(Math.random());
+// }
+window.addEventListener('scroll', throttle(handle, 1000));
+
+/*
+    节流
+    方式二：时间戳节流
+
+*/
+// var throttle = function(func, delay) {
+//     var prev = Date.now();
+//     console.log('45')
+//     return function() {
+//         var context = this;   //this指向window
+//         var args = arguments;
+//         var now = Date.now();
+//     console.log('now',now)
+
+//         if (now - prev >= delay) {
+//             func.apply(context, args);
+//             prev = Date.now();
+//     console.log('prev',prev)
+
+//         }
+//     }
+// }
+// function handle() {
+//     console.log(Math.random());
+// }
+// window.addEventListener('scroll', throttle(handle, 1000));
+
+/*
+    节流
+    第一次触发马上执行函数，最后一次触发也可以执行
+*/
+// var throttle = function(func, delay) {
+//      var timer = null;
+//      console.log('ll')
+//      var startTime = Date.now();  //设置开始时间
+//      return function() {
+       
+//              var curTime = Date.now();
+//              var remaining = delay - (curTime - startTime);  //剩余时间
+//              var context = this;
+//              var args = arguments;
+//              clearTimeout(timer);
+//               if (remaining <= 0) {      // 第一次触发立即执行
+//                     func.apply(context, args);
+//                     startTime = Date.now();
+//               } else {
+//                     timer = setTimeout(func, remaining);   //取消当前计数器并计算新的remaining
+//               }
+//       }
+// }
+// function handle() {
+//       console.log(Math.random());
+// }
+// var ff=function(){
+//     console.log('dddff')
+// }
+//  window.addEventListener('scroll', ff());
+</script>
+</html>
