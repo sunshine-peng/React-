@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../build/react.development.js"></script>
+    <script src="../build/react-dom.development.js"></script>
+    <script src="../build/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="example"></div>
+    <script type="text/babel">
+    class HelloMessage extends React.Component{
+        render(){
+            return (
+                <h1>{this.props.name}</h1>
+            )
+        }
+    }
+    ReactDOM.render(
+        /*
+        react组件的第一个字母必须大写
+        组件类智能包含一个顶层标签
+        react组件的使用就像插入普通标签一样插入到网页
+        */
+        <HelloMessage name='张三'/>,
+        document.querySelector('#example')
+    )
+    </script>
+</body>
+</html>

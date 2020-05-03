@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom'
 import LifeCycle from './component/LifeCycle'
 import ComponentVs from './component/ComponentVs'
 import PureComponentTest from './component/PureComponentTest'
+import ContextSample from './component/ContextSample'
+import HooksTest from './component/HooksTest'
 
 // import App from './App'
 // class Counter extends React.Component {
@@ -135,4 +137,5 @@ import PureComponentTest from './component/PureComponentTest'
       }
   }
 
-ReactDOM.render(<PureComponentTest />,document.querySelector('#root'))
+// ReactDOM.render(<ContextSample />,document.querySelector('#root'))
+ReactDOM.render(<HooksTest />,document.querySelector('#root'))
