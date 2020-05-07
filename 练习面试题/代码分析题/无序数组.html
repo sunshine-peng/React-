@@ -1,0 +1,68 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    //     function getRsult(data,n,sum){
+    //     if(n==0 &&sum==0){
+    //         return  true
+    //     }
+    //     if(n<0){
+    //         return false 
+    //     }
+    //     if(n>0){
+    //         for(var i = 0; i < data.length; i++){
+
+    //             var temp = data.slice(i+1,data.length);
+
+    //             return getRsult(temp,n-1,sum-data[i]) || getRsult(temp,n,sum);
+    //        }	
+
+    //     }
+        
+    // };
+    
+    
+    function getResult(arr, n, sum) {
+        var arr1= []
+        var arr2 = []
+        if(n<0) {
+            return false
+        }
+        if(n==0 && sum==0) {
+            return true
+        }
+        if(n>0){
+           
+        for (var i =0 ;i< arr.length;i++){
+            // for(var j = i+n-1; arr.length-n-i>0;j++){
+
+            // }
+            if(n>0){
+                arr1.push(arr[i])
+                n--
+            }
+
+        }
+        console.log(arr1)
+        var sum1 =0
+        for(var i = 0;i<arr1.length;i++){
+            for(var j=0;j<)
+            sum1+=arr1[i]
+        }
+        console.log(sum1)
+      
+        if(sum1 == sum){
+        //    return true
+        arr2.concat(arr1)
+        }
+    }
+    }
+    console.log(getResult([1,2,3,4,5,6,7],4,19))
+   </script>
+</body>
+</html> -->

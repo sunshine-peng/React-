@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var another = {
+            a: 1
+        }
+        var my = Object.create(another)
+        my.a++
+        console.log(another.a)
+        console.log(my.a)
+        console.log(another.a)
+
+    </script>
+</body>
+</html>

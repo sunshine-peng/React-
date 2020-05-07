@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var s = 'aaabbbcccaaabbbbaaaabadbjamhvndsab'
+        var obj = {}
+        var arr = []
+        for(var i = 0; i<s.length; i++) {
+            if(!obj[s[i]]) {
+
+                obj[s[i]] = 1
+
+            } else {
+
+                obj[s[i]]++
+
+            } 
+        }
+        
+        console.log(obj)
+        var max = -1
+        var maxkey
+
+      for(var key in obj){
+          if(obj[key] > max){
+              max = obj[key]
+              maxkey = key
+          }  
+      }
+
+      console.log(max)
+      console.log(maxkey)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#">第一个链接</a>
+    <a href="#">第二个链接</a>
+    <a href="#">第三个链接</a>
+    <a href="#">第四个链接</a>
+    <!-- <div id='dd' style="width: 60px; height: 60px;background-color: blue;">adsba</div> -->
+    <!-- <input type="button" id="btn" value="255"> -->
+
+    <script>
+        var node = document.getElementsByTagName('a')
+        console.log(node)
+        for(var i = 0; i<node.length; i++) {
+            console.log(node[i])
+            node[i].onclick = function () {
+                console.log(this)
+                alert(this.innerText)
+            }
+        }
+        // var dd=document.getElementById('dd')
+        // console.log(dd)
+        // dd.onclick= function () {
+        //     console.log(1)
+        //     alert(this.innerText)
+        // }
+        // console.log(2)
+        // document.getElementById('btn').onclick = function() {
+        //     console.log(555)
+        // }
+
+    </script>
+</body>
+</html>

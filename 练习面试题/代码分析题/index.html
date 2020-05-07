@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul#awesome{
+            color: red;
+        }
+
+        ul.shopping-list li.favorite span{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- <p style="font-size: 2rem;">hello125555</p>
+    <p style="font-size: 20px;">5dsavdfs 54</p>
+    <div style="width: 60px;height: 60px;background-color: red;"></div>
+    <div style="width: 2rem;height: 2rem;background-color:blue;"></div> -->
+    <ul class="shopping-list" id="awesome">
+        <li><span>Mike</span></li>
+        <li class="favorite" id="must-buy"><span class="highlight">suggar</span></li>
+    </ul>
+    <script>
+        var x = 3
+var foo = {
+    x: 2,
+    baz: {
+        x: 1,
+        bar: function() {
+            return this.x
+        }
+    }
+}
+// // function tt(){
+//     console.log(this)
+//     return this.x
+    
+// }
+// var bb = tt
+// console.log(tt())
+var go = foo.baz.bar
+console.log(go())
+console.log(foo.baz.bar())
+// let x = 0
+// async function test() {
+  
+//     x += await 2
+//     console.log(x)
+    // setTimeout(() => {
+    //     x += 2
+    //     console.log(x)
+    // },200)
+    
+// }
+// async function test1(){
+//     return 2
+// }
+
+
+// test()
+// x += 1
+// console.log(x)
+    </script>
+</body>
+</html>

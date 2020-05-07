@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../build/react.development.js"></script>
+    <script src="../build/react-dom.development.js"></script>
+    <script src="../build/babel.min.js"></script>
+    <script src="../build/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="example"></div>
+    <script type="text/babel">
+    
+    class RepoList extends React.Component{
+        constructor(props) {
+            super(props)
+
+            this.state = {
+                loading: true,
+                error: null,
+                data: null
+            }
+        }
+
+        componentDidMount() {
+            this.props.promise.then(
+                value => this.setState({loading:false,data:value}),
+                error => this.setState({loading:false,error:error})
+            )
+        }
+
+        render() {
+            if (this.state.loading) {
+                return <span>loading...</span>
+            } else if (this.state.error !== null) {
+                return <span>Error:{this.state.error.message}</span>
+            } else {
+                var repo = this.state.data.items
+                var repoList = repo.map((item,index) => {
+                    return (
+                        <li key={index}>
+                        <a href={item.html_url}>{item.name}</a>
+                            {item.stargazers_count}
+                            <br />
+                            {item.dedescription}
+                        </li>
+                    )
+                })
+                return (
+                    <main>
+                    <p>most popular javascript projects in github</p>
+                    <ol>{repoList}</ol>
+                    </main>
+                )
+            }
+        }
+    }
+
+    ReactDOM.render(
+        <RepoList promise={$.getJSON('https://api.github.com/search/repositories?q=javascript&sort=stars')} />,
+        document.querySelector('#example')
+    )
+    </script>
+</body>
+</html>

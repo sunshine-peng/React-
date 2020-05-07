@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function change(obj) {
+            obj.a = 18
+            obj = {name: 'bill', age:20}
+            return obj
+        }
+        var person1 = {name: 'tom', age: 10}
+        var person2 = change(person1)
+        console.log(person1)
+        console.log(person2)
+        function change(value) {
+            value++
+            return value
+        }
+
+        var num1 = 1
+        var num2 = change(num1)
+        console.log(num1)
+        console.log(num2)
+    </script>
+</body>
+</html>
