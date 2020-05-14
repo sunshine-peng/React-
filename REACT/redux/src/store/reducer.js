@@ -21,7 +21,8 @@ export default (state = defaultState, action) => {
         return newState
     } else if (action.type === DELETE_TODO_ITEM ) {
         newState = JSON.parse ( JSON.stringify ( state ))
-        newState.list.splice ( action.index, 1 )
+        console.log('dsa',action.value)
+        newState.list.splice ( action.value, 1 )
         return newState
     } else if (action.type === 'init_list_action') {
         newState = JSON.parse ( JSON.stringify ( state ))

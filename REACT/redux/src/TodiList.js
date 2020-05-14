@@ -2,8 +2,8 @@ import React,{Component} from 'react';
 import 'antd/dist//antd.css'
 import store from './store/index'
 import TodoListUI from './TodoListUI'
-import Form from 'antd/lib/form/Form';
-import { getInputChange, addTodoItem,initListAction, deleteTodoItem } from './store/actionCreator'
+// import Form from 'antd/lib/form/Form';
+import { getInputChange, getInitList, initListAction, addTodoItem, deleteTodoItem } from './store/actionCreator'
 import axios from 'axios'
 // const data = [
 //   'Racing car sprays burning fuel into crowd.',
@@ -28,12 +28,31 @@ class TodoList extends Component {
   }
 
 componentDidMount () {
-    axios.get ( 'http://api.github.com/users/octocat/gists').then ( (res) => {
-    const data = res.data
-    const action = initListAction ( Object.keys(data[0].owner) )
-    store.dispatch ( action )
+  const action = getInitList ()
+  store.dispatch ( action )
+  console.log( action );
+  
+    // axios.get ( 'http://api.github.com/users/octocat/gists').then ( (res) => {
+    // const data = res.data
+    // const action = initListAction ( Object.keys(data[0].owner) )
+    // store.dispatch ( action )
 
-    })
+    // })
+    
+
+  //  const action = getTodoList ()
+  //  store.dispatch ( action )//因为此刻的store已经集成的thunk的功能，所以支持dispatch的一个函数，合格函数会自动执行
+
+  // axios.get ( 'http://musicapi.leanapp.cn/comment/music?id=186016&limit=1').then ( (res) => {
+  //           const data = res.data
+  //           const action = initListAction ( Object.keys(data.hotComments[0]) )
+  //           store.dispatch ( action )
+  //           console.log(action)
+  //           // dispatch ( action )
+        
+  //           })  
+  //  console.log(action);
+   
 }
 
    handleBtnClick () {

@@ -19,7 +19,7 @@ const TodoListUI =( props ) => {  //当一个组件只有render时，可以使�
         style={{marginTop:'10px',width:'300px'}}
         dataSource={props.List}
         renderItem={(item, index) => (
-          <List.Item onClick={( index ) => {
+          <List.Item onClick={() => {
               props.handleItemDelete( index )
           }}>
             {item}
