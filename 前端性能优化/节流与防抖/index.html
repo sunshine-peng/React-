@@ -70,27 +70,27 @@
   方式一：使用定时器节流
 
 */
-// var throttle = function(func, delay) {
-//     var timer = null;
-//     // console.log('666')
-//     console.log(arguments)
-//     return function() {
-//         var context = this;
-//         // console.log('dd',context)
-//         var args = arguments;
-//         console.log('66',args)
-//         if (!timer) {
-//             timer = setTimeout(function() {
-//                 func.apply(context, args);
-//                 timer = null;
-//             }, delay);
-//             // console.log('5')
-//         }
-//     }
-// }
-// function handle() {
-//     console.log(Math.random());
-// }
+var throttle = function(func, delay) {
+    var timer = null;
+    // console.log('666')
+    // console.log(arguments)
+    return function() {
+        var context = this;
+        // console.log('dd',context)
+        var args = arguments;
+        console.log('66',args)
+        if (!timer) {
+            timer = setTimeout(function() {
+                func.apply(context, args);
+                timer = null;
+            }, delay);
+            // console.log('5')
+        }
+    }
+}
+function handle() {
+    console.log(Math.random());
+}
 window.addEventListener('scroll', throttle(handle, 1000));
 
 /*
